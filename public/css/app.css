@@ -17,6 +17,9 @@
     height: 30%;
     border: 1.5px solid black;
     border-radius: 15px;
+    background-color: #7fd8db;
+    opacity: 0.7;
+    color:black;
 }
 
 /*!

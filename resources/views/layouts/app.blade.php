@@ -138,7 +138,33 @@
         @else
         <div id='login' class='container-fluid'>
             <div id='loginForm'>
-                aaaaaa
+                <h3>Welcome to Introspect</h3>
+                <h4>Please log in</h4>
+                <form action="/authenticate" method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <p class="h4 mb-4">Sign in</p>
+            <!-- Email -->
+            <input type="username" id="defaultLoginFormEmail" class="form-control mb-4" name="username" placeholder="username" required="required">
+            <!-- Password -->
+            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" name="password" placeholder="Password" required="required">
+            <div class="d-flex justify-content-around">
+                <div>
+                    <!-- Remember me -->
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                        <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                    </div>
+                </div>
+                <div>
+                    <!-- Forgot password -->
+                    <a href="">Forgot password?</a>
+                </div>
+            </div>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>    
+                    
+                </form>
             </div>
         </div>
         @endif
