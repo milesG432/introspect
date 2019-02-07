@@ -1,5 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
+#menu-toggle{
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+#dash-quick{
+    margin-top: 25px;
+    border-right: solid 1px grey;     
+}
+#dash-quick h5{
+    text-align: center;
+}
+
+#topnav h3{
+    margin-left: auto;
+    margin-right: 0px;
+}
+
 #login{
     height: 100%;
     background-image: url("/img/city.jpg");

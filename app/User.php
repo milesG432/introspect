@@ -25,6 +25,7 @@ class User extends Authenticatable
             if($username && $password)
             {
                 $results = DB::select("SELECT * FROM staff WHERE username = '" . $username . "' LIMIT 1;");                
+                //TODO Check for hashed password after add users completed
                 //if(sizeof($results) == 1 && Hash::check($password, $results[0]->password))
                 if(sizeof($results) == 1 && $results[0]->password == $password)
                 {   
