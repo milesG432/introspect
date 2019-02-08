@@ -13,7 +13,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
-
+        <!--data tables css-->
+        <link href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
 
 
 
@@ -85,12 +86,15 @@
             <div class="bg-light border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading">INTROSPECT </div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                    <a href="/" class="list-group-item list-group-item-action bg-light">Dashboard</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">Customers</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Suppliers</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-light">Sales</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">Jobs</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">Development</a>
                     <a href="#" class="list-group-item list-group-item-action bg-light">Reports</a>
-                    <a href="#" class="list-group-item list-group-item-action bg-light">Site Admin</a>
+                    <a href="/Admin" class="list-group-item list-group-item-action bg-light">Site Admin</a>
+                    <a href="/logout" class="list-group-item list-group-item-action bg-light">Logout</a>
                 </div>
             </div>
             <!-- /#sidebar-wrapper -->
@@ -188,12 +192,15 @@
 
         <!-- JQuery -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--Custom js-->
+        <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
         <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>        
-        <!--Custom js-->
-        <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+        <!--Datatables js-->
+        <script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>        
+        
 
     </body>
 </html>

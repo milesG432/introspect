@@ -9,3 +9,11 @@
           $('#menu-toggle').text("Hide Menu");
       }
     });
+    
+    $(document).ready( function () {
+    $('#myTable').DataTable();
+    });
+    
+    if(window.location.href.indexOf("/admin") > -1){
+        
+    }

@@ -15,4 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/Admin', 'userController@getStaff');
+
+Route::get('/logout', 'userController@logout');
+
 Route::post('/authenticate', "userController@logIn");
+
+

@@ -64,5 +64,30 @@ class userController extends Controller
     {
         Session::flush();        
         return redirect('/');
-    }        
+    }
+    
+    public function getStaff()
+    {
+        try
+        {
+            $staff = new User();
+            $result = $staff->getStaff();            
+            if(isset($result['errors']) || isset($result['exception']))
+            {
+                return view ("admin", ["errors"=>$result]);
+                Session::flash('error', $result['errors']);
+                return redirect('/Admin');
+            }
+            else if(sizeof($result) > 0)
+            {
+                return view ("admin", ["staff"=>$result]);
+            }
+            
+            
+            
+        } catch (Exception $ex) {
+            Session::flash('error', $ex->getMessage);
+            return redirect('/Admin');
+        }
+    }
 }

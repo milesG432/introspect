@@ -56,4 +56,33 @@ class User extends Authenticatable
             return $errors;
         }
     }
+    
+    public function getStaff()
+    {
+        try
+        {
+            $errors = 
+            [
+                
+            ];
+            $staff = DB::select("
+            SELECT staff.*, staffaccesslevel.accessLevel as level
+            FROM staff 
+            inner join staffaccesslevel 
+            ON staff.accessLevelID = staffaccesslevel.id;");
+            
+            if(sizeof($staff) > 0)
+            {
+                return $staff;
+            } 
+            else 
+            {
+                $errors['noUser'] = "No user accounts found";
+                return $errors;
+            }
+        } catch (Exception $ex) {
+            $errors['exception'] = $ex->getMessage;
+            return $errors;
+        }
+    }
 }

@@ -25,6 +25,20 @@
     text-align: center;
 }
 
+#adminPills{
+    margin-top: 12.5px;
+}
+
+#nav-tabContent{
+    margin-top:12.5px;
+}
+
+#newUserBtn{
+    margin-bottom: 15px;
+    background-color: #7fd8db;
+    border-radius: 15px;
+}
+
 #loginForm{
     position: absolute;
     margin: auto;
